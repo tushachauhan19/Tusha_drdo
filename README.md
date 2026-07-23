@@ -1,43 +1,35 @@
-# Running Ollama Locally
+# Ollama Local Setup
 
-This repository contains the basic steps I followed to install and run Ollama locally on my Windows system using the Command Prompt.
+This repository contains the steps I followed to set up Ollama on my Windows system and run a local Large Language Model (LLM) using the Command Prompt. I also created a Python virtual environment and verified that Python scripts run successfully inside it.
 
-## Software Used
+## Project Details
 
-- Windows 11
+- Operating System: Windows
 - Ollama Version: 0.32.1
-- Model: Llama 3.2
+- Model Used: Llama 3.2
+- Python Virtual Environment: venv
 
-## Steps I Followed
+## Steps Performed
 
-### 1. Check if Ollama is installed
+### 1. Verified Ollama Installation
 
 ```bash
 ollama --version
 ```
 
-### 2. Download the model
+### 2. Downloaded the Llama 3.2 Model
 
 ```bash
 ollama pull llama3.2
 ```
 
-The model was downloaded successfully.
-
-### 3. Check the installed model
+### 3. Verified the Installed Model
 
 ```bash
 ollama list
 ```
 
-Output:
-
-```
-NAME               ID              SIZE
-llama3.2:latest    a80c4f17acd5    2.0 GB
-```
-
-### 4. Run the model
+### 4. Ran the Model Locally
 
 ```bash
 ollama run llama3.2
@@ -46,19 +38,62 @@ ollama run llama3.2
 Example:
 
 ```
->>> hii hello how are you
-Hello! I'm just a computer program, so I don't have feelings or emotions like humans do. But I'm functioning properly and ready to help with any questions or tasks you may have!
+>>> hiii
+How's it going? Is there something I can help you with or would you like to chat?
 ```
 
-## Commands Used
+## Python Virtual Environment
+
+Created a virtual environment using:
 
 ```bash
-ollama --version
-ollama pull llama3.2
-ollama list
-ollama run llama3.2
+python -m venv venv
+```
+
+Activated the virtual environment:
+
+```bash
+venv\Scripts\activate
+```
+
+Created a simple Python file (`app.py`) to verify that Python was working correctly inside the virtual environment.
+
+Run the program:
+
+```bash
+python app.py
+```
+
+Example Output:
+
+```
+Virtual Environment is Working!
+Enter your name: tusha
+Welcome, tusha!
+Count: 1
+Count: 2
+Count: 3
+Count: 4
+Count: 5
+```
+
+## Git Commands Used
+
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/tushachauhan19/Tusha_drdo.git
+git push -u origin main
 ```
 
 ## Conclusion
 
-I successfully installed Ollama on my local machine, downloaded the Llama 3.2 model, and ran it through the Command Prompt without using the Ollama desktop application.
+This project demonstrates:
+
+- Installation of Ollama on Windows.
+- Downloading and running the Llama 3.2 model locally.
+- Creating and activating a Python virtual environment.
+- Running a Python script successfully.
+- Uploading the project to GitHub using Git.
